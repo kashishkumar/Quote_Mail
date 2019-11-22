@@ -46,6 +46,6 @@ content=quotelist[i][0]
 mail_body=(subject+content)
 #for email_id in recipeientlist:
 #    recipientemailid=email_id
-smtpObj.sendmail(sender_mail_id, recipeientlist, mail_body.encode) 
+smtpObj.sendmail(sender_mail_id, recipeientlist, mail_body.encode()) 
 
 smtpObj.quit()
