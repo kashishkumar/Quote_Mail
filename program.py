@@ -2,18 +2,18 @@
 
 import csv
 
-QuoteFile = open('/home/test/Desktop/Email_Quotes/QuoteList.csv') # https://www.forbes.com/sites/kevinkruse/2013/05/28/inspirational-quotes/#13cea60f6c7a
+QuoteFile = open('./Email_Quotes/QuoteList.csv') # https://www.forbes.com/sites/kevinkruse/2013/05/28/inspirational-quotes/#13cea60f6c7a
 QuoteReader = csv.reader(QuoteFile)
 quotelist = list(QuoteReader)
 
-RecipeientFile=open('/home/test/Desktop/Email_Quotes/Email_list.csv')
+RecipeientFile=open('./Email_Quotes/Email_list.csv')
 RecipeientReader = csv.reader(RecipeientFile)
 recipeientlist = list(RecipeientReader)
 
 #Scheduling
 
-i=int(list(csv.reader(open('/home/test/Desktop/Email_Quotes/iterator.csv')))[0][0])
-iteratorfile = open('/home/test/Desktop/Email_Quotes/iterator.csv', 'w', newline='')
+i=int(list(csv.reader(open('./Email_Quotes/iterator.csv')))[0][0])
+iteratorfile = open('./Email_Quotes/iterator.csv', 'w', newline='')
 iteratorWriter = csv.writer(iteratorfile)
 iteratorWriter.writerow([i+1])
 iteratorfile.close()
@@ -34,8 +34,8 @@ smtpObj = smtplib.SMTP(domain_name,port)
 #smtpObj.ehlo()
 smtpObj.starttls() # Enables Encryption
 
-sender_mail_id='kashishpythontest@gmail.com'
-sender_password='12102069'
+sender_mail_id='[***]@gmail.com'
+sender_password='***'
 
 smtpObj.login(sender_mail_id, sender_password) # Might require application specific password or allow access to less secure apps
 
