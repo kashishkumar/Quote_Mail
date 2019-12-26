@@ -24,7 +24,7 @@ iteratorfile.close()
 Login
 Send Mail
 Quit
-#
+
 """
 
 import smtplib
